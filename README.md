@@ -46,6 +46,10 @@ Windows 可执行文件的构建步骤见 [构建说明](tools/BUILD.md)。如�
 
 Windows 可用 `start.bat --backup` 备份，Linux 可用 `bash start.sh --backup`。排查问题时，请在 GitHub Issues 中提供版本、复现步骤和脱敏日志。
 
+## 自动发布
+
+推送与 `app.py` 中版本一致的标签（例如 `v1.2.3`），GitHub Actions 会自动构建并发布 Windows x64 ZIP、Linux TAR.GZ 与 SHA-256 校验文件。Windows 包内含可执行程序，Linux 使用 Python 3.11+ 运行。可在 Actions 中手动运行 **Build and release** 生成构建产物。
+
 ## 许可
 
 本项目采用 **GNU Affero General Public License v3.0（AGPL-3.0-only）**。允许按许可使用、修改、分发及商用。修改后通过网络向用户提供服务时，须按第 13 条向这些用户提供获取该版本对应源码的机会。分发须遵循许可证约定。详见 [LICENSE](LICENSE)。
