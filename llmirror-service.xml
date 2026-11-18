@@ -1,0 +1,19 @@
+<service>
+  <id>llmirror</id>
+  <name>词镜 llmirror</name>
+  <description>词镜 llmirror 大模型 API 实测工作台，SQLite 本地存储。</description>
+  <executable>%BASE%\llmirror.exe</executable>
+  <arguments>--no-browser</arguments>
+  <workingdirectory>%BASE%</workingdirectory>
+  <startmode>Automatic</startmode>
+  <serviceaccount>
+    <domain>NT AUTHORITY</domain>
+    <user>LocalService</user>
+  </serviceaccount>
+  <onfailure action="restart" delay="10 sec"/>
+  <onfailure action="restart" delay="30 sec"/>
+  <stoptimeout>20 sec</stoptimeout>
+  <logpath>%BASE%\data\logs</logpath>
+  <log mode="roll-by-size"><sizeThreshold>2048</sizeThreshold><keepFiles>3</keepFiles></log>
+  <env name="PYTHONUTF8" value="1"/>
+</service>

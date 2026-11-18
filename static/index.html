@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light"><meta name="description" content="词镜 llmirror：面向团队的大模型 API 性能与质量实测看板。Windows / Linux 部署，SQLite 存储。">
+  <title>词镜 llmirror · 大模型 API 实测看板</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css?v=1.2.3">
+</head>
+<body>
+<div id="auth-screen" class="auth-screen"><div class="auth-art"><div class="brand"><span class="brand-symbol"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13h5l3-8 4 14 3-6h5"/></svg></span><span class="brand-name">词镜<small>llmirror</small></span></div><div><h1>大模型 API<br>实测看板</h1><p>性能测试 · 质量回归 · 历史记录</p></div><footer>番禺电信集成交付团队 · 研发出品 <span>v1.2.3</span></footer></div><div class="auth-panel"><div id="auth-box"><h2>正在连接工作台</h2><p>正在加载登录表单。若长时间无响应，请按 Ctrl+F5 刷新。</p><p class="auth-footnote">如仍无法加载，请查看服务连接状态。</p><a class="button" href="/api/health" target="_blank" rel="noopener">查看服务连接状态</a><noscript><p class="form-error">浏览器未启用 JavaScript。请允许此站点运行脚本后刷新。</p></noscript></div><div class="auth-producer">番禺电信集成交付团队 · 研发出品</div></div></div>
+<div id="shell" class="shell" hidden>
+  <aside class="sidebar">
+    <a href="#overview" class="brand"><span class="brand-symbol"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 13h5l3-8 4 14 3-6h5"/></svg></span><span class="brand-name">词镜<small>llmirror</small></span> </a>
+    <p class="side-caption">大模型 API 实测工作台</p>
+    <div class="side-group">工作空间</div>
+    <nav id="nav"></nav>
+    <div class="side-bottom"><div class="local-card"><span class="live-dot"></span><div>本地部署<small id="runtime-platform">SQLite</small></div></div><button id="help-link" class="side-help">使用说明</button><div class="team-credit"><span>番禺电信集成交付团队</span><small>研发出品</small></div><div class="user-area"><div class="avatar" id="avatar">A</div><div><strong id="username"></strong><small id="user-role"></small></div><button id="logout" title="退出登录" aria-label="退出登录"><svg class="ui-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H4v16h5M10 12h11m-4-4 4 4-4 4"/></svg></button></div></div>
+  </aside>
+  <div class="workspace"><header class="topbar"><div><span class="breadcrumb">工作空间</span><span class="slash">/</span><span id="top-title">实测总览</span></div><div class="top-right"><span class="top-date" id="top-date"></span><span class="node-label" id="top-node">● Windows 本机</span></div></header><main id="main"></main><footer class="page-footer"><span>番禺电信集成交付团队 · 研发出品</span><span>北京时间 UTC+8</span></footer></div>
+</div>
+<dialog id="dialog"><div id="dialog-content"></div></dialog><div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+<script src="/bootstrap.js?v=1.2.3" charset="utf-8" defer></script>
+</body></html>
